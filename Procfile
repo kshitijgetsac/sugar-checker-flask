@@ -1,1 +1,1 @@
-web: python sugarcheck.py
+web: python sugar_check.py
