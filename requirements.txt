@@ -2,3 +2,4 @@ Flask
 pytesseract
 Pillow
 pillow-heif
+Flask-Cors==3.0.10
