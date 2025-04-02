@@ -72,5 +72,12 @@ def sugar_check():
         if os.path.exists(file_path):
             os.remove(file_path)
 
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Retrieve the port from the environment variable (Heroku sets this) or default to 5000 for local development
+    port = int(os.environ.get("PORT", 5000))
+    # Enable debug mode if the DEBUG environment variable is set to a truthy value
+    debug_mode = os.environ.get("DEBUG", "False").lower() in ['true', '1', 't']
+    app.run(host='0.0.0.0', port=port, debug=debug_mode)
+
