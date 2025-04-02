@@ -27,7 +27,9 @@ sugar_list = [
     'raccharose','sorghum syrup','sucrose','sugar (granulated)','sweet sorghum','syrup',
     'treacle','turbinado sugar', 'yellow sugar','sugars','added sugars'
 ]
-
+@app.route('/')
+def home():
+    return "welcome to the app"
 @app.route('/sugar-check', methods=['POST'])
 def sugar_check():
     if 'image' not in request.files:
